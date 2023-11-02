@@ -1,0 +1,34 @@
+name: trip
+description: Sistema para diário de viagens
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.1.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  intl: ^0.18.0
+  http: ^1.0.0
+  json_annotation: any
+  english_words: ^4.0.0
+  window_size:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding.git
+      path: plugins/window_size
+  go_router: ^11.0.0
+  mask_text_input_formatter: ^2.5.0
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  analysis_defaults:
+    path: ../analysis_defaults
+  flutter_test:
+    sdk: flutter
+  json_serializable: ^6.2.0
+  build_runner: ^2.1.8
+
+flutter:
+  uses-material-design: true
