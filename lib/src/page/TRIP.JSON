@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "matricula": "12222",
+        "frota": "123c234",
+        "empresa": "SANTINS",
+        "origem": "RECIFE",
+        "destino": "JABOATÃO",
+        "launchTrips": []
+    }
+]

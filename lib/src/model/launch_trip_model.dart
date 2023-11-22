@@ -10,6 +10,8 @@ class LaunchTrip {
   String hora;
   String km;
   String tipo;
+  bool isDelete = false;
+  bool isEdit = false;
 
   LaunchTrip(
       {required this.id,

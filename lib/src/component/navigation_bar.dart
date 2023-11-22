@@ -16,10 +16,10 @@ class MyBottomNavigationBar extends StatelessWidget {
             icon: Icon(Icons.home),
             label: '',
           ),
-          BottomNavigationBarItem(
+          /*BottomNavigationBarItem(
             icon: Icon(Icons.remove_road_outlined),
             label: 'Viagem',
-          ),
+          ),*/
           BottomNavigationBarItem(
             icon: Icon(Icons.exit_to_app),
             label: 'Sair',
@@ -30,7 +30,7 @@ class MyBottomNavigationBar extends StatelessWidget {
           if (index == 0 && !this.isHome) {
             Navigator.pushNamed(this.context, '/');
           } else if (index == 1) {
-            Navigator.pushNamed(this.context, '/trip');  
+            //Navigator.pushNamed(this.context, '/trip');  
           } else if (index == 2) {  
             SystemNavigator.pop();
           } else if (!this.isHome){

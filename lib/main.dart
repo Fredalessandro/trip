@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:window_size/window_size.dart';
 import 'src/page/sign_in.dart';
 import 'src/page/sign_up.dart';
-import 'src/page/launch_trip.dart';
 import 'src/page/trip_page.dart';
 
 void main() {
@@ -38,9 +37,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => LaunchTripPage(),
+        '/': (context) => TripPage(),
         '/trip': (context) => TripPage(),
-        '/launchtrip': (context) => LaunchTripPage(),
         '/user': (context) => SignUpPage(),
         '/signin': (context) => SignIn(),
       },

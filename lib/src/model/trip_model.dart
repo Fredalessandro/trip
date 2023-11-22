@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:json_annotation/json_annotation.dart';
+import 'package:trip/src/model/launch_trip_model.dart';
 
 part 'trip_model_http.g.dart';
 
@@ -10,6 +13,7 @@ class Trip {
   String empresa;
   String origem;
   String destino;
+  List<LaunchTrip> launchTrips;
   
   Trip(
       {required this.id,
@@ -17,7 +21,8 @@ class Trip {
       required this.frota,
       required this.empresa,
       required this.origem,
-      required this.destino});
+      required this.destino,
+      required this.launchTrips});
 
   factory Trip.fromJson(Map<String, dynamic> json) => _$TripFromJson(json);
 

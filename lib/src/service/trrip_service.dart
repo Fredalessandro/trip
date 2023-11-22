@@ -1,5 +1,4 @@
 import 'dart:convert';
-import '../model/launch_trip_model.dart';
 import '../model/trip_model.dart';
 import 'local_storage_service.dart';
 
@@ -13,6 +12,30 @@ class TripService  {
          const JsonEncoder encoder = JsonEncoder();
          final String stringJson = encoder.convert(trips);
          sharedLocalStorageService.put(KEY, stringJson);
+   }
+
+   static saveTrip(Trip trip) async {
+         SharedLocalStorageService sharedLocalStorageService = SharedLocalStorageService();
+         
+         List<Trip> trips = [];
+         
+         await get().then((value) => trips = value);
+         trips.forEach((element) {
+          if (element.id == trip.id) {
+              element = trip;
+          }
+         });
+
+         if (trips.isEmpty) {
+             trips.add(trip);
+         }
+
+         remove();
+
+         const JsonEncoder encoder = JsonEncoder();
+         final String stringJson = encoder.convert(trips);
+         sharedLocalStorageService.put(KEY, stringJson);
+         
    }
 
    static Future<List<Trip>> get() async {
